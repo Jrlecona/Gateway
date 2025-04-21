@@ -1,0 +1,19 @@
+{
+    "Routes" : [
+        {
+            "DownstreamPathTemplate" : "/api/product/{everything}",
+            "DownstreamSchem" : "http",
+            "DonwstreamHostAndPorts" : [
+                {
+                    "Host" : "product-service",
+                    "Port" : 3000
+                }
+            ],
+            "UpstreamPahtTemplate" : "/api/product/{everything}",
+            "UpstreamHttpMethod" : [ "GET", "POST" ]
+        }
+    ],
+    "GlobalConfiguration" : {
+        "BaseUrl" : "http://localhost:3001"
+    }
+}
